@@ -1,5 +1,5 @@
 // API 기본 URL 설정
-const apiUrl = 'http://localhost:8080';
+const apiUrl = 'http://211.183.3.204:8080';
 
 // 게시글 목록 불러오기 (기존 레스토랑 목록)
 async function fetchRestaurants() {
