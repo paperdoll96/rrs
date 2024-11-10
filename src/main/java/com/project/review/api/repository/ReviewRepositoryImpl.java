@@ -20,10 +20,11 @@ public class ReviewRepositoryImpl implements ReviewRepositoryCustom {
 
     @Override
     public Double getAvgScoreByRestaurantId(Long restaurantId) {
-        return queryFactory.select(QReviewEntity.reviewEntity.score.avg())
+        Double avgScore = queryFactory.select(QReviewEntity.reviewEntity.score.avg())
                 .from(QReviewEntity.reviewEntity)
                 .where(QReviewEntity.reviewEntity.restaurantId.eq(restaurantId))
                 .fetchFirst();
+        return avgScore != null ? avgScore : 0.0; // 평균이 없을 때 0.0 반환
     }
 
     @Override

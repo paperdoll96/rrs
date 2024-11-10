@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* 카드 고정 높이 설정 */
+.card {
+  height: 200px; /* 카드 높이 고정 (원하는 높이로 조절) */
+}
+
+/* 제목 및 내용 텍스트 잘림 효과 */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 1.5em; /* 한 줄로 자르기 */
+}
